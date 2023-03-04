@@ -1,0 +1,398 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "38477e9d-6df0-4dc6-815d-110deaa4fbef",
+   "metadata": {},
+   "source": [
+    "##Characteristics of tuple\n",
+    "#1.tuples are immutable.\n",
+    "#2.they are ordered\n",
+    "#3.they are indexed.\n",
+    "#4.they can contain duplicate items.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6a9a32c0-a1f7-4e04-bce9-84d058a42910",
+   "metadata": {},
+   "source": [
+    "##two tuples method in python\n",
+    "#1 count: Return number of occurrences of value.\n",
+    "#2 index:  Return first index of value."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "4a8d31c1-1581-4f4a-85f8-9374ad7b2d64",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s1=(\"cherry\",\"mango\",\"banana\",\"orange\",\"mango\")\n",
+    "s1.count(\"mango\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "46e82cda-2021-431e-ba7d-df9c0262935f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s1.index(\"banana\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c19b9bf9-6315-4b4d-b9c8-37025e2505a1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "##reason why tuples have only two inbulit methods as compared to lists\n",
+    "Tuples are mutable.Their content cannot be changed."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "df312a49-fcac-4b83-b86b-21dce9ed3e11",
+   "metadata": {},
+   "source": [
+    "The collection datatypes in python that do not allow duplicate items is SET.\n",
+    "#a code using a set to remove\n",
+    "duplicates from the given list.\n",
+    "List = [1, 1, 1, 2, 1, 3, 1, 4, 2, 1, 2, 2, 2, 3, 2, 4, 3, 1, 3, 2, 3, 3, 3, 4, 4, 1, 4, 2, 4, 3, 4, 4]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "5475103d-c2b2-4df6-be98-af60fca7809f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 2, 3, 4]"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "List = [1, 1, 1, 2, 1, 3, 1, 4, 2, 1, 2, 2, 2, 3, 2, 4, 3, 1, 3, 2, 3, 3, 3, 4, 4, 1, 4, 2, 4, 3, 4, 4]\n",
+    "list(set(List))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c9a33faf-2794-4292-92c7-13f82e7f44c2",
+   "metadata": {},
+   "source": [
+    "difference between the union() and update() methods for a set."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "3a3bb786-002a-4734-b3fc-015f7244837a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'anant', 'anil', 'ishita', 'ritu', 'riya', 'shreyansh', 'vijay'}"
+      ]
+     },
+     "execution_count": 18,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s2={\"riya\",\"ishita\",\"anant\",\"ritu\",\"anil\"}\n",
+    "s3={\"shreyansh\",\"vijay\"}\n",
+    "s2.union(s3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "773cc030-4d68-461a-be87-c01eff2f9619",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'anant', 'anil', 'ishita', 'ritu', 'riya', 'shreyansh', 'vijay'}"
+      ]
+     },
+     "execution_count": 20,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s2={\"riya\",\"ishita\",\"anant\",\"ritu\",\"anil\"}\n",
+    "s3={\"shreyansh\",\"vijay\"}\n",
+    "s2.update(s3)\n",
+    "s2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3a959bfb-bbc3-428c-aa4f-33879402ae99",
+   "metadata": {},
+   "source": [
+    "Union does not modify s1 and s2.It creates a new set.it has a returning value.\n",
+    "Update modify s1. since it does not hv any returning value so to print s1 we hv to seperately write s1."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e5427289-4099-4942-af3c-1e63f72c256d",
+   "metadata": {},
+   "source": [
+    "##Dictionary\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "28a2dd03-ed9e-4a13-84f8-091a247119fd",
+   "metadata": {},
+   "source": [
+    "Dictionaries are used to store data values in key:value pairs.\n",
+    "dictionary is a collection which is ordered, mutable and do not allow dupicates."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "e2411299-8733-463b-b186-6b28f76f5547",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dict1={\"name\":\"riya\", \"age\":20 ,\"gender\":\"female\"}\n",
+    "type(dict1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "a98fdd09-8633-4db4-84fa-655e086060db",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'name': 'riya', 'age': 20, 'gender': 'female'}"
+      ]
+     },
+     "execution_count": 22,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dict1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "1316adce-a054-4090-bb63-13d92efb209d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'name': 'riya',\n",
+       " 'age': '20',\n",
+       " 'gender': 'female',\n",
+       " 'total_income': {'salary': '10lkh', 'bonus': '2lkh'}}"
+      ]
+     },
+     "execution_count": 30,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "##nested dictionary\n",
+    "dict2={\"name\":\"riya\",\"age\":\"20\",\"gender\":\"female\",\"total_income\":{\"salary\":\"10lkh\",\"bonus\":\"2lkh\"}}\n",
+    "dict2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9ef90b95-1b33-45dc-96c8-db9654af0162",
+   "metadata": {},
+   "source": [
+    "Using setdefault() method, create key named topics in the given dictionary and also add the value of\n",
+    "the key as this list['Python', 'Machine Learning’, 'Deep Learning']\n",
+    "dict1 = {'language' : 'Python', 'course': 'Data Science Masters'}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "f2fa9768-82c9-4ae3-8f17-a574cfea9150",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'language': 'Python', 'course': 'Data Science Masters', 'topics': ['Python', 'Machine Learning', 'Deep Learning']}\n"
+     ]
+    }
+   ],
+   "source": [
+    "dict1 = {'language' : 'Python', 'course': 'Data Science Masters'}\n",
+    "dict1.setdefault(\"topics\",[\"Python\",\"Machine Learning\",\"Deep Learning\"])\n",
+    "print(dict1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "df65f093-7a8a-4acf-b94d-ee7a535581a5",
+   "metadata": {},
+   "source": [
+    "##view objects in dictionary\n",
+    "#1 dict.keys()\n",
+    "#2 dict.values()\n",
+    "#3 dict.items()\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "cc04e9f5-14a8-4c3d-9574-ce74a167cc5a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict_keys(['Sport', 'Teams'])"
+      ]
+     },
+     "execution_count": 39,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dict1 = {'Sport': 'Cricket' , 'Teams': ['India', 'Australia', 'England', 'South Africa', 'Sri Lanka', 'New Zealand']}\n",
+    "dict1.keys()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "0127e464-7034-42a3-b4e2-e3b9983cda7d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict_values(['Cricket', ['India', 'Australia', 'England', 'South Africa', 'Sri Lanka', 'New Zealand']])"
+      ]
+     },
+     "execution_count": 41,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dict1.values()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "id": "44caa0f5-a5bc-4c34-8c8a-556bac704eb6",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict_items([('Sport', 'Cricket'), ('Teams', ['India', 'Australia', 'England', 'South Africa', 'Sri Lanka', 'New Zealand'])])"
+      ]
+     },
+     "execution_count": 42,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dict1.items()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ff592d97-5763-428e-8c6a-5b88ee1f4e88",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
